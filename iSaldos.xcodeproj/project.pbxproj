@@ -43,6 +43,10 @@
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
+		8B4A968B1EC6435500BA8F8D /* SASplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A968A1EC6435500BA8F8D /* SASplashViewController.swift */; };
+		8B4A968D1EC643EE00BA8F8D /* SAGaleriaImagenesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A968C1EC643EE00BA8F8D /* SAGaleriaImagenesViewController.swift */; };
+		8B4A968F1EC644D700BA8F8D /* SALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A968E1EC644D700BA8F8D /* SALoginViewController.swift */; };
+		8B4A96911EC644EC00BA8F8D /* SARegistroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A96901EC644EC00BA8F8D /* SARegistroTableViewController.swift */; };
 		8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33801EC63BDA00728B05 /* APIUTILS.swift */; };
 		8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33821EC63DD100728B05 /* RateApp.swift */; };
 		8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33841EC63E0500728B05 /* APIHELPERS.swift */; };
@@ -97,6 +101,10 @@
 		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
+		8B4A968A1EC6435500BA8F8D /* SASplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASplashViewController.swift; sourceTree = "<group>"; };
+		8B4A968C1EC643EE00BA8F8D /* SAGaleriaImagenesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAGaleriaImagenesViewController.swift; sourceTree = "<group>"; };
+		8B4A968E1EC644D700BA8F8D /* SALoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALoginViewController.swift; sourceTree = "<group>"; };
+		8B4A96901EC644EC00BA8F8D /* SARegistroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SARegistroTableViewController.swift; sourceTree = "<group>"; };
 		8B7C33801EC63BDA00728B05 /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		8B7C33821EC63DD100728B05 /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		8B7C33841EC63E0500728B05 /* APIHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHELPERS.swift; sourceTree = "<group>"; };
@@ -229,6 +237,10 @@
 		412741F21E9FC0FE0074CDD7 /* LOGIN/REGISTRO/GALERIA */ = {
 			isa = PBXGroup;
 			children = (
+				8B4A968A1EC6435500BA8F8D /* SASplashViewController.swift */,
+				8B4A968C1EC643EE00BA8F8D /* SAGaleriaImagenesViewController.swift */,
+				8B4A968E1EC644D700BA8F8D /* SALoginViewController.swift */,
+				8B4A96901EC644EC00BA8F8D /* SARegistroTableViewController.swift */,
 			);
 			name = LOGIN/REGISTRO/GALERIA;
 			sourceTree = "<group>";
@@ -483,18 +495,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				8B4A968D1EC643EE00BA8F8D /* SAGaleriaImagenesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
+				8B4A968B1EC6435500BA8F8D /* SASplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
 				8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
+				8B4A968F1EC644D700BA8F8D /* SALoginViewController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */,
 				8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
+				8B4A96911EC644EC00BA8F8D /* SARegistroTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1095" y="2192.9577464788731"/>
         </scene>
-        <!--Home Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="8a4-mi-IxP">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="17Q-Nh-yOF" customClass="ISHomeTabBarController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SATabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="17Q-Nh-yOF" customClass="SATabBarViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SEj-YH-kXy">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="-3343.125" y="-717.25352112676057"/>
         </scene>
-        <!--Registro Usuario Table View Controller-->
+        <!--Registro Table View Controller-->
         <scene sceneID="mk2-eI-ud7">
             <objects>
-                <tableViewController storyboardIdentifier="RegistroUsuarioTableViewController" id="1yV-fq-TJr" customClass="ISRegistroUsuarioTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SARegistroTableViewController" id="1yV-fq-TJr" customClass="SARegistroTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eaX-Bf-yai">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,7 +271,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" backgroundImage="cerrasX"/>
                                                     <connections>
-                                                        <action selector="hideVC:" destination="1yV-fq-TJr" eventType="touchUpInside" id="Ht5-mJ-MNp"/>
+                                                        <action selector="hideVC:" destination="1yV-fq-TJr" eventType="touchUpInside" id="FPk-Xw-ptQ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -327,7 +327,7 @@
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="singUpACTION:" destination="1yV-fq-TJr" eventType="touchUpInside" id="oNN-yA-6o7"/>
+                                                        <action selector="registroEnParse:" destination="1yV-fq-TJr" eventType="touchUpInside" id="fMu-ib-HQN"/>
                                                     </connections>
                                                 </button>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dad-YH-TnW">
@@ -414,14 +414,14 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="myActInd" destination="hYT-Kd-TJn" id="7Eq-GL-eSm"/>
-                        <outlet property="myApellidoTF" destination="dad-YH-TnW" id="nNp-H6-vaI"/>
-                        <outlet property="myEmailTF" destination="gsi-J2-a5Z" id="nK9-il-6qW"/>
-                        <outlet property="myImagenPerfil" destination="eOy-fu-0cv" id="tid-mF-OHY"/>
-                        <outlet property="myMovilTF" destination="IPH-0Y-Hgt" id="bjI-Rc-Fb8"/>
-                        <outlet property="myNombreTF" destination="H82-97-5wR" id="QgL-tM-Ljz"/>
-                        <outlet property="myPasswordTF" destination="GQJ-58-rgj" id="uTR-9R-a6Y"/>
-                        <outlet property="myUsernameTF" destination="Wzr-gV-5CR" id="wty-5K-gYn"/>
+                        <outlet property="myActInd" destination="hYT-Kd-TJn" id="IDF-dV-ToT"/>
+                        <outlet property="myApellidoTF" destination="dad-YH-TnW" id="VUd-7G-HVM"/>
+                        <outlet property="myEmailTF" destination="gsi-J2-a5Z" id="FIl-DU-TVk"/>
+                        <outlet property="myImagePerfil" destination="eOy-fu-0cv" id="Czb-Jx-E5y"/>
+                        <outlet property="myMovilTF" destination="IPH-0Y-Hgt" id="nJb-gd-x1V"/>
+                        <outlet property="myNombreTF" destination="H82-97-5wR" id="ruF-uI-eXT"/>
+                        <outlet property="myPasswordTF" destination="GQJ-58-rgj" id="hXw-K6-Ueu"/>
+                        <outlet property="myusernameTF" destination="Wzr-gV-5CR" id="BeH-Ew-Ckk"/>
                         <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContoller" id="PMB-TT-YxY"/>
                     </connections>
                 </tableViewController>
@@ -432,7 +432,7 @@
         <!--Terminos y Condiciones-->
         <scene sceneID="WJj-Kv-uVC">
             <objects>
-                <viewController storyboardIdentifier="TerminosViewController" id="Rps-Ut-xw8" customClass="ISTerminosViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SATerminosYCondicionesViewController" id="Rps-Ut-xw8" customClass="SATerminosYCondicionesViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FMW-dk-RXt"/>
                         <viewControllerLayoutGuide type="bottom" id="Id5-yi-zT5"/>
@@ -498,7 +498,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <navigationItem key="navigationItem" title="Terminos y Condiciones" id="89y-cb-50N">
                         <barButtonItem key="rightBarButtonItem" title="OK" id="l9Z-8d-yOS">
                             <connections>
-                                <action selector="hideVC:" destination="Rps-Ut-xw8" id="6Ql-PF-C2c"/>
+                                <action selector="hideVC:" destination="Rps-Ut-xw8" id="tlW-cf-KWa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -613,10 +613,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
             </objects>
             <point key="canvasLocation" x="-4676.25" y="133.09859154929578"/>
         </scene>
-        <!--Menu Table View Controller-->
+        <!--Menu Lateral Table View Controller-->
         <scene sceneID="LY9-8M-tsO">
             <objects>
-                <tableViewController storyboardIdentifier="MenuTableViewController" id="rnY-TD-lps" customClass="ISMenuTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SAMenuLateralTableViewController" id="rnY-TD-lps" customClass="SAMenuLateralTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RSP-uO-BQm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -861,10 +861,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="myApellidoPerfil" destination="eQU-lc-mih" id="Rpj-6L-wsZ"/>
-                        <outlet property="myEmailPerfil" destination="V3j-eW-ifp" id="Ujf-Je-HwE"/>
-                        <outlet property="myImagenPerfil" destination="Y8J-Bg-fE1" id="MZv-gr-1rT"/>
-                        <outlet property="myNombrePerfil" destination="b5a-Sz-g7i" id="peR-xA-Dsh"/>
+                        <outlet property="myApellidoPerfil" destination="eQU-lc-mih" id="eJ9-my-Wrh"/>
+                        <outlet property="myEmailPerfil" destination="V3j-eW-ifp" id="GQC-jQ-WPh"/>
+                        <outlet property="myImagenPerfil" destination="Y8J-Bg-fE1" id="3bE-5w-Kp9"/>
+                        <outlet property="myNombrePerfil" destination="b5a-Sz-g7i" id="1Ds-5x-KvD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycq-xd-nIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -874,7 +874,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Ofertas-->
         <scene sceneID="GFO-i6-Q0Y">
             <objects>
-                <tableViewController storyboardIdentifier="OfertasTableViewController" id="8Mf-b3-Q4P" customClass="ISOfertasTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SAOfertasTableViewController" id="8Mf-b3-Q4P" customClass="SAOfertasTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" id="OKc-Dm-5qp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -900,7 +900,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="POy-H5-OEA" id="Lwu-Cp-lZA"/>
+                        <outlet property="menuButton" destination="POy-H5-OEA" id="fKC-84-GRW"/>
                         <segue destination="qU4-L3-6qi" kind="show" identifier="showOfertaSegue" id="8wM-TU-pCW"/>
                     </connections>
                 </tableViewController>
@@ -908,10 +908,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
             </objects>
             <point key="canvasLocation" x="1905" y="132.04225352112675"/>
         </scene>
-        <!--Detalle Oferta View Controller-->
+        <!--Oferta Detalle Table View Controller-->
         <scene sceneID="jTg-DO-bI4">
             <objects>
-                <tableViewController storyboardIdentifier="DetalleOfertaViewController" id="qU4-L3-6qi" customClass="ISDetalleOfertaViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SAOfertaDetalleTableViewController" id="qU4-L3-6qi" customClass="SAOfertaDetalleTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9in-Pn-7dl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1236,20 +1236,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xVO-3u-3eJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="myDescripcionAsociado" destination="je4-EQ-k65" id="ian-6O-6WY"/>
-                        <outlet property="myDireccionAsociado" destination="eN1-1M-n48" id="725-Dz-NHZ"/>
-                        <outlet property="myEmailAsociado" destination="1DV-sc-Yi2" id="EUP-VA-aTk"/>
-                        <outlet property="myFechaOferta" destination="OvE-sh-hlw" id="yUw-iW-uBG"/>
-                        <outlet property="myFijoAsociado" destination="uvB-jQ-hyg" id="w5Z-J5-ro6"/>
-                        <outlet property="myImagenOferta" destination="KDO-ik-LAj" id="Vpc-4P-iv1"/>
-                        <outlet property="myInformacionOferta" destination="Ycb-Ij-vlM" id="zEd-59-qbZ"/>
-                        <outlet property="myMapView" destination="eH9-Y6-PVc" id="uMm-LJ-Ken"/>
-                        <outlet property="myMovilAsociado" destination="ybb-Xj-f5D" id="Q1i-1x-wSf"/>
-                        <outlet property="myNombreAsociado" destination="BFU-zO-rXb" id="60q-zc-zRw"/>
-                        <outlet property="myNombreOferta" destination="abm-5H-wQn" id="laF-Hs-RI6"/>
-                        <outlet property="myWebAsociado" destination="Y9c-Sl-ArD" id="Tjd-1g-gNq"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iy-xa-ET2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1284,7 +1270,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="hlV-Wd-xm1" id="7cr-FD-tJ0"/>
                         <segue destination="qzt-0p-lkA" kind="show" identifier="showCuponSegue" id="TDe-s4-e1w"/>
                     </connections>
                 </tableViewController>
@@ -1321,7 +1306,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="BTV-KY-bur" id="4fh-qG-jRj"/>
                         <segue destination="C2e-aM-EfB" kind="show" identifier="showConcursoSegue" id="1cJ-Ly-N92"/>
                     </connections>
                 </tableViewController>
@@ -2564,6 +2548,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Odd-gc-QFi"/>
-        <segue reference="H3W-9g-Zj5"/>
+        <segue reference="nX1-Ui-Xl1"/>
     </inferredMetricsTieBreakers>
 </document>

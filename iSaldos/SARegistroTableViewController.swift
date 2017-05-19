@@ -7,89 +7,177 @@
 //
 
 import UIKit
+import Parse
 
 class SARegistroTableViewController: UITableViewController {
+    
+    //MARK: - Variables locales
+    var fotoSeleccionada = false
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var myImagePerfil: UIImageView!
+    @IBOutlet weak var myusernameTF: UITextField!
+    @IBOutlet weak var myPasswordTF: UITextField!
+    @IBOutlet weak var myNombreTF: UITextField!
+    @IBOutlet weak var myApellidoTF: UITextField!
+    @IBOutlet weak var myEmailTF: UITextField!
+    @IBOutlet weak var myMovilTF: UITextField!
+    @IBOutlet weak var myActInd: UIActivityIndicatorView!
+    
+    //MARK: - IBActions
+    @IBAction func hideVC(_ sender: Any) {
+        dismiss(animated: true,
+                completion: nil)
+    }
+    
+    @IBAction func registroEnParse(_ sender: Any) {
+        
+        var errorInicial = ""
+        if verificatextField(myusernameTF.text) || verificatextField(myPasswordTF.text) || verificatextField(myNombreTF.text) || verificatextField(myApellidoTF.text) || verificatextField(myEmailTF.text) || myImagePerfil.image == nil{
+            
+            errorInicial = "Estimado usuario por favor rellene los campos"
+            
+        }else{
+            
+            let newUser = PFUser()
+            newUser.username = myusernameTF.text
+            newUser.password = myPasswordTF.text
+            newUser.email = myEmailTF.text
+            newUser["nombre"] = myNombreTF.text
+            newUser["apellido"] = myApellidoTF.text
+            newUser["movil"] = myMovilTF.text
+            
+            myActInd.isHidden = false
+            myActInd.startAnimating()
+            UIApplication.shared.beginIgnoringInteractionEvents()
+            
+            newUser.signUpInBackground(block: { (exitoso, errorRegistro) in
+                
+                self.myActInd.isHidden = true
+                self.myActInd.stopAnimating()
+                UIApplication.shared.endIgnoringInteractionEvents()
+                
+                if errorRegistro != nil{
+                    errorInicial = "Error al registrar"
+                }else{
+                    
+                    self.signUpWithPhoto()
+                    self.performSegue(withIdentifier: "jumpFromRegisterVC", sender: self)
+                }
+            })
+        }
+        
+        if errorInicial != ""{
+            present(muestraAlertVC("Atención",
+                                   messageData: errorInicial),
+                    animated: true,
+                    completion: nil)
+        }
+        
+    }
+    
+    //MARK: - Utils
+    func verificatextField(_ string : String?) -> Bool{
+        return string?.trimmingCharacters(in: .whitespaces) == ""
+    }
+    
+    func signUpWithPhoto(){
+        
+        if fotoSeleccionada{
+            
+            let imageProfile = PFObject(className: "ImageProfile")
+            let imageDataProfile = UIImageJPEGRepresentation(myImagePerfil.image!, 0.3)
+            let imageProfileFile = PFFile(name: "userImageProfile.jpg", data: imageDataProfile!)
+            
+            imageProfile["imageProfile"] = imageProfileFile
+            imageProfile["username"] = PFUser.current()?.username
+            
+            imageProfile.saveInBackground()
+            
+        }else{
+            self.present(muestraAlertVC("Atención",
+                                        messageData: "foto no seleccionada"),
+                         animated: true,
+                         completion: nil)
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.keyboardDismissMode = .onDrag
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //mostrar o ocultar el Activity indicator
+        myActInd.isHidden = true
+        
+        //gesto sobre la imagen para que el usurio pueda interactuar
+        myImagePerfil.isUserInteractionEnabled = true
+        let tapGR = UITapGestureRecognizer(target: self,
+                                           action: #selector(pickerPhoto))
+        myImagePerfil.addGestureRecognizer(tapGR)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+}//TODO: - Fin e la clase
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+extension SARegistroTableViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func pickerPhoto(){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            muestraMenu()
+        }else{
+            muestraLibreriaFotos()
+        }
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func muestraMenu(){
+        let alertVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let tomaFotoCamarAction = UIAlertAction(title: "Toma foto", style: .default) { _ in
+            self.muestraCamaraDisposito()
+        }
+        let seleccionaFotoAction = UIAlertAction(title: "Selecciona desde la Librería", style: .default) { _ in
+            self.muestraLibreriaFotos()
+        }
+        alertVC.addAction(cancelAction)
+        alertVC.addAction(tomaFotoCamarAction)
+        alertVC.addAction(seleccionaFotoAction)
+        present(alertVC, animated: true, completion: nil)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func muestraLibreriaFotos(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func muestraCamaraDisposito(){
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let imageData = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            myImagePerfil.image = imageData
+            fotoSeleccionada = true
+        }
+        dismiss(animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }
+

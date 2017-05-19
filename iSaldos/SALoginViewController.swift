@@ -44,6 +44,10 @@ class SALoginViewController: UIViewController {
         
         myAccederBTN.layer.cornerRadius = 5
         myresgistrarseBTn.layer.cornerRadius = 5
+        
+        myUsernameTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        myPasswordTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        
     }
     
     func showVideoInVC(){
@@ -67,5 +71,10 @@ class SALoginViewController: UIViewController {
     func playerItem(){
         player.seek(to: kCMTimeZero)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 
 }

@@ -52,6 +52,11 @@
 		8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33841EC63E0500728B05 /* APIHELPERS.swift */; };
 		8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */; };
 		8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */; };
+		8BC4C9971ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */; };
+		8BC4C99A1ECF70EB00AAD7D5 /* SATerminosYCondicionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9991ECF70EB00AAD7D5 /* SATerminosYCondicionesViewController.swift */; };
+		8BC4C99C1ECF714900AAD7D5 /* SATabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C99B1ECF714900AAD7D5 /* SATabBarViewController.swift */; };
+		8BC4C99E1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C99D1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift */; };
+		8BC4C9A01ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C99F1ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift */; };
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 /* End PBXBuildFile section */
@@ -112,6 +117,11 @@
 		8B7C33841EC63E0500728B05 /* APIHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHELPERS.swift; sourceTree = "<group>"; };
 		8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEnumerationError.swift; sourceTree = "<group>"; };
 		8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASignIn.swift; sourceTree = "<group>"; };
+		8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuLateralTableViewController.swift; sourceTree = "<group>"; };
+		8BC4C9991ECF70EB00AAD7D5 /* SATerminosYCondicionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATerminosYCondicionesViewController.swift; sourceTree = "<group>"; };
+		8BC4C99B1ECF714900AAD7D5 /* SATabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATabBarViewController.swift; sourceTree = "<group>"; };
+		8BC4C99D1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertasTableViewController.swift; sourceTree = "<group>"; };
+		8BC4C99F1ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertaDetalleTableViewController.swift; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +244,7 @@
 				412741FF1E9FC1680074CDD7 /* OFERTAS */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
 				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
+				8BC4C9981ECF70C100AAD7D5 /* MENU */,
 			);
 			name = VIEWS_CONTROLLERS;
 			sourceTree = "<group>";
@@ -254,6 +265,8 @@
 			children = (
 				412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */,
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
+				8BC4C99D1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift */,
+				8BC4C99F1ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift */,
 			);
 			name = OFERTAS;
 			sourceTree = "<group>";
@@ -323,6 +336,16 @@
 				415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */,
 			);
 			name = USUARIOS;
+			sourceTree = "<group>";
+		};
+		8BC4C9981ECF70C100AAD7D5 /* MENU */ = {
+			isa = PBXGroup;
+			children = (
+				8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */,
+				8BC4C9991ECF70EB00AAD7D5 /* SATerminosYCondicionesViewController.swift */,
+				8BC4C99B1ECF714900AAD7D5 /* SATabBarViewController.swift */,
+			);
+			name = MENU;
 			sourceTree = "<group>";
 		};
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
@@ -501,20 +524,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				8BC4C9971ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift in Sources */,
 				8B4A968D1EC643EE00BA8F8D /* SAGaleriaImagenesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				8B4A968B1EC6435500BA8F8D /* SASplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
+				8BC4C9A01ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift in Sources */,
 				8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
 				8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */,
 				8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */,
+				8BC4C99E1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				8B4A968F1EC644D700BA8F8D /* SALoginViewController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
+				8BC4C99C1ECF714900AAD7D5 /* SATabBarViewController.swift in Sources */,
+				8BC4C99A1ECF70EB00AAD7D5 /* SATerminosYCondicionesViewController.swift in Sources */,
 				8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */,
 				8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,

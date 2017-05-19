@@ -50,6 +50,8 @@
 		8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33801EC63BDA00728B05 /* APIUTILS.swift */; };
 		8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33821EC63DD100728B05 /* RateApp.swift */; };
 		8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33841EC63E0500728B05 /* APIHELPERS.swift */; };
+		8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */; };
+		8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */; };
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,8 @@
 		8B7C33801EC63BDA00728B05 /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		8B7C33821EC63DD100728B05 /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		8B7C33841EC63E0500728B05 /* APIHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHELPERS.swift; sourceTree = "<group>"; };
+		8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEnumerationError.swift; sourceTree = "<group>"; };
+		8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASignIn.swift; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +296,8 @@
 		412742301E9FC67B0074CDD7 /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
+				8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */,
+				8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -503,6 +509,8 @@
 				8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
+				8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */,
+				8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				8B4A968F1EC644D700BA8F8D /* SALoginViewController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,

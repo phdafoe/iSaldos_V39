@@ -68,15 +68,4 @@ class SALoginViewController: UIViewController {
         player.seek(to: kCMTimeZero)
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 }

@@ -57,6 +57,8 @@
 		8BC4C99C1ECF714900AAD7D5 /* SATabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C99B1ECF714900AAD7D5 /* SATabBarViewController.swift */; };
 		8BC4C99E1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C99D1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift */; };
 		8BC4C9A01ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C99F1ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift */; };
+		8BC4C9A21ECF83A000AAD7D5 /* SAPromocionesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9A11ECF83A000AAD7D5 /* SAPromocionesModel.swift */; };
+		8BC4C9A41ECF854900AAD7D5 /* SAAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9A31ECF854900AAD7D5 /* SAAsociadoModel.swift */; };
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 /* End PBXBuildFile section */
@@ -122,6 +124,8 @@
 		8BC4C99B1ECF714900AAD7D5 /* SATabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATabBarViewController.swift; sourceTree = "<group>"; };
 		8BC4C99D1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertasTableViewController.swift; sourceTree = "<group>"; };
 		8BC4C99F1ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertaDetalleTableViewController.swift; sourceTree = "<group>"; };
+		8BC4C9A11ECF83A000AAD7D5 /* SAPromocionesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPromocionesModel.swift; sourceTree = "<group>"; };
+		8BC4C9A31ECF854900AAD7D5 /* SAAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAsociadoModel.swift; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +315,8 @@
 			children = (
 				8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */,
 				8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */,
+				8BC4C9A11ECF83A000AAD7D5 /* SAPromocionesModel.swift */,
+				8BC4C9A31ECF854900AAD7D5 /* SAAsociadoModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -541,7 +547,9 @@
 				8B4A968F1EC644D700BA8F8D /* SALoginViewController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
+				8BC4C9A21ECF83A000AAD7D5 /* SAPromocionesModel.swift in Sources */,
 				8BC4C99C1ECF714900AAD7D5 /* SATabBarViewController.swift in Sources */,
+				8BC4C9A41ECF854900AAD7D5 /* SAAsociadoModel.swift in Sources */,
 				8BC4C99A1ECF70EB00AAD7D5 /* SATerminosYCondicionesViewController.swift in Sources */,
 				8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */,
 				8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */,

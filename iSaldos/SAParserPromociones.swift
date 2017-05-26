@@ -20,19 +20,18 @@ class SAParserPromociones: NSObject {
     func getDatosPromociones(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
         
         let customRequest = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASE_URL_LOCALIDAD + idLocalidad + "&tipo=" + idTipo + "&p=" + idParametro)!)
+        print(customRequest)
+        
         return Alamofire.request(customRequest).responseJSON().then{(dataJSON) -> JSON in
             self.jsonDataPromociones = JSON(dataJSON)
-            //print(self.jsonDataPromociones)
+            print(self.jsonDataPromociones!)
             return self.jsonDataPromociones!
         }
     }
     
     func getParserPromociones() -> [SAPromocionesModel]{
-        
         var arrayPromociones = [SAPromocionesModel]()
-        
         for c_promocion in (jsonDataPromociones?["promociones"])! {
-            
             let asociadoModel = SAAsociadoModel(pId: dimeString(c_promocion.1["asociado"], nombre: "id"),
                                                 pNombre: dimeString(c_promocion.1["asociado"], nombre: "nombre"),
                                                 pDescripcion: dimeString(c_promocion.1["asociado"], nombre: "descripcion"),

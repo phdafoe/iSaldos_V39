@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
+import PKHUD
+import PromiseKit
 
 class SAOfertasTableViewController: UITableViewController {
+    
+    
+    //MARK: - Variables
+    var arrayOfertas = [SAPromocionesModel]()
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -16,6 +23,9 @@ class SAOfertasTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //LLAMADA
+        llamadaOfertas()
 
         //TODO: - Mostramos el menu lateral
         if revealViewController() != nil{
@@ -24,6 +34,10 @@ class SAOfertasTableViewController: UITableViewController {
             revealViewController().rightViewRevealWidth = 150
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        //REGISTRO DE LA CELDA
+        tableView.register(UINib(nibName: "ISOfertaCustomCell", bundle: nil), forCellReuseIdentifier: "ISOfertaCustomCell")
+        
         
     }
 
@@ -36,67 +50,60 @@ class SAOfertasTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayOfertas.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let customOfertascell = tableView.dequeueReusableCell(withIdentifier: "ISOfertaCustomCell", for: indexPath) as! ISOfertaCustomCell
 
-        // Configure the cell...
-
-        return cell
+        let model = arrayOfertas[indexPath.row]
+        
+        customOfertascell.myNombreOferta.text = model.nombre
+        customOfertascell.myFechaOferta.text = model.fechaFin
+        customOfertascell.myInformacionOferta.text = model.masInformacion
+        customOfertascell.myImporteOferta.text = model.importe
+        
+        customOfertascell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: getImagePath(CONSTANTES.LLAMADAS.OFERTA, id: model.id!, name: model.imagen!))!),
+                                                     placeholder: #imageLiteral(resourceName: "placeholder"),
+                                                     options: nil,
+                                                     progressBlock: nil,
+                                                     completionHandler: nil)
+        return customOfertascell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 310
     }
-    */
+    
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    //LLAMADA
+    func llamadaOfertas(){
+        let datosOferta = SAParserPromociones()
+        let idLocalidad = "11"
+        let tipoOferta = CONSTANTES.LLAMADAS.OFERTA
+        let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
+        
+        HUD.show(.progress)
+        firstly{
+            return when(resolved: datosOferta.getDatosPromociones(idLocalidad, idTipo: tipoOferta, idParametro: tipoParametro))
+            }.then{_ in
+                self.arrayOfertas = datosOferta.getParserPromociones()
+            }.then{_ in
+                self.tableView.reloadData()
+            }.then{_ in
+                HUD.hide(afterDelay: 0)
+            }.catch{ error  in
+                self.present(muestraAlertVC("AQUI", messageData: "PROBLEMAS DE DESCARGA \(error.localizedDescription)"), animated: true, completion: nil)
+            }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

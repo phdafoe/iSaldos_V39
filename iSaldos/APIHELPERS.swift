@@ -38,4 +38,25 @@ func dimeString(_ json : JSON, nombre : String) -> String{
 }
 
 
+func getImagePath(_ type : String, id : String, name : String) -> String{
+    return CONSTANTES.LLAMADAS.BASE_URL_PHOTO + id  + "/" + name
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

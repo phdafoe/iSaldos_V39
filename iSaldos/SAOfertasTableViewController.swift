@@ -16,6 +16,7 @@ class SAOfertasTableViewController: UITableViewController {
     
     //MARK: - Variables
     var arrayOfertas = [SAPromocionesModel]()
+    var indexImagenData : UIImage?
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -81,6 +82,34 @@ class SAOfertasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 310
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let customOfertascell = tableView.dequeueReusableCell(withIdentifier: "ISOfertaCustomCell", for: indexPath) as! ISOfertaCustomCell
+        //indexImagenData = customOfertascell.myImagenOferta.image
+        performSegue(withIdentifier: "showOfertaSegue", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showOfertaSegue"{
+            let detalleVC = segue.destination as! SAOfertaDetalleTableViewController
+            let selectInd = tableView.indexPathForSelectedRow?.row
+            let objInd = arrayOfertas[selectInd!]
+            detalleVC.oferta = objInd
+            //detalleVC.detalleImagen = indexImagenData
+            
+            do{
+                let url = URL(string: CONSTANTES.LLAMADAS.BASE_URL_PHOTO + (objInd.id!) + "/" + (objInd.imagen!))!
+                let customData = try Data(contentsOf: url)
+                let imageData = UIImage(data: customData)
+                detalleVC.detalleImagen = imageData
+            }catch{
+                
+            }
+            
+        }
+    }
+    
     
 
     //LLAMADA

@@ -51,6 +51,7 @@
 		8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33821EC63DD100728B05 /* RateApp.swift */; };
 		8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33841EC63E0500728B05 /* APIHELPERS.swift */; };
 		8B97535C1ED8785600FB534B /* SAParserPromociones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535B1ED8785600FB534B /* SAParserPromociones.swift */; };
+		8B97535E1ED8A45200FB534B /* SAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535D1ED8A45200FB534B /* SAWebViewController.swift */; };
 		8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */; };
 		8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */; };
 		8BC4C9971ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */; };
@@ -119,6 +120,7 @@
 		8B7C33821EC63DD100728B05 /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		8B7C33841EC63E0500728B05 /* APIHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHELPERS.swift; sourceTree = "<group>"; };
 		8B97535B1ED8785600FB534B /* SAParserPromociones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAParserPromociones.swift; sourceTree = "<group>"; };
+		8B97535D1ED8A45200FB534B /* SAWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAWebViewController.swift; sourceTree = "<group>"; };
 		8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEnumerationError.swift; sourceTree = "<group>"; };
 		8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASignIn.swift; sourceTree = "<group>"; };
 		8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuLateralTableViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
 				8BC4C99D1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift */,
 				8BC4C99F1ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift */,
+				8B97535D1ED8A45200FB534B /* SAWebViewController.swift */,
 			);
 			name = OFERTAS;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				8B4A968F1EC644D700BA8F8D /* SALoginViewController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
+				8B97535E1ED8A45200FB534B /* SAWebViewController.swift in Sources */,
 				8BC4C9A21ECF83A000AAD7D5 /* SAPromocionesModel.swift in Sources */,
 				8BC4C99C1ECF714900AAD7D5 /* SATabBarViewController.swift in Sources */,
 				8BC4C9A41ECF854900AAD7D5 /* SAAsociadoModel.swift in Sources */,

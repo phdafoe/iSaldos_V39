@@ -1145,13 +1145,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="91 226 00 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvB-jQ-hyg">
-                                                    <rect key="frame" x="58" y="8" width="129" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fijo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxU-ZX-Nhs">
                                                     <rect key="frame" x="8" y="8" width="45" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1168,13 +1161,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movil:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9D-RH-LGm">
                                                     <rect key="frame" x="8" y="31" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.cemvalderas.es" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9c-Sl-ArD">
-                                                    <rect key="frame" x="58" y="54" width="163" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1201,6 +1187,26 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYG-Iw-6gA">
+                                                    <rect key="frame" x="58" y="6" width="122" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                    <state key="normal" title="91 226 00 21">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="hacerLLamadaTelefonica:" destination="qU4-L3-6qi" eventType="touchUpInside" id="MV0-nh-PKd"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-xO-Dnv">
+                                                    <rect key="frame" x="58" y="53" width="203" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                    <state key="normal" title="http://webButton.com"/>
+                                                    <connections>
+                                                        <action selector="muestraPaginaWebAsociado:" destination="qU4-L3-6qi" eventType="touchUpInside" id="vwl-SY-8nR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1236,10 +1242,77 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xVO-3u-3eJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myDescripcionAsociado" destination="je4-EQ-k65" id="hgK-zB-vzb"/>
+                        <outlet property="myDireccionAsociado" destination="eN1-1M-n48" id="DH7-lt-n0I"/>
+                        <outlet property="myEmailAsociado" destination="1DV-sc-Yi2" id="Vua-Q4-Wpr"/>
+                        <outlet property="myImagenOferta" destination="KDO-ik-LAj" id="2qH-Le-lAm"/>
+                        <outlet property="myMapAsociado" destination="eH9-Y6-PVc" id="mMj-xu-0VJ"/>
+                        <outlet property="myMasInformacion" destination="Ycb-Ij-vlM" id="8oh-rn-dPU"/>
+                        <outlet property="myNombreAsociado" destination="BFU-zO-rXb" id="cEp-qz-Q3y"/>
+                        <outlet property="myNombreOferta" destination="abm-5H-wQn" id="I3s-OX-Xxv"/>
+                        <outlet property="myTelefonoFijoAsociado" destination="aYG-Iw-6gA" id="hFJ-A4-7fK"/>
+                        <outlet property="myTelefonoMovilAsociado" destination="ybb-Xj-f5D" id="gRL-k2-ca7"/>
+                        <outlet property="myWebAsociado" destination="DYp-xO-Dnv" id="CEb-Da-9N8"/>
+                        <outlet property="myfechaFin" destination="OvE-sh-hlw" id="jrM-z6-VnQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iy-xa-ET2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2731.875" y="132.04225352112675"/>
+            <point key="canvasLocation" x="2731.875" y="130.98591549295776"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="CpN-4a-WwI">
+            <objects>
+                <viewController storyboardIdentifier="SAWebViewController" id="yTS-lQ-uVy" customClass="SAWebViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61M-5k-fru"/>
+                        <viewControllerLayoutGuide type="bottom" id="IAd-4Y-pdz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="esU-Lj-zN8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoU-6c-P83">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BYY-Pv-vix">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-sJ-oXE">
+                                <rect key="frame" x="283" y="28" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="P4t-yv-cQn"/>
+                                    <constraint firstAttribute="height" constant="21" id="a9W-lW-e5a"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="cerrasX"/>
+                                <connections>
+                                    <action selector="hideVC:" destination="1yV-fq-TJr" eventType="touchUpInside" id="5U1-Rv-JP0"/>
+                                    <action selector="hideVC:" destination="yTS-lQ-uVy" eventType="touchUpInside" id="gtL-Dx-5b7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IAd-4Y-pdz" firstAttribute="top" secondItem="EoU-6c-P83" secondAttribute="bottom" id="2iM-Es-vRS"/>
+                            <constraint firstItem="BYY-Pv-vix" firstAttribute="centerX" secondItem="esU-Lj-zN8" secondAttribute="centerX" id="6PP-pn-s7l"/>
+                            <constraint firstItem="fAV-sJ-oXE" firstAttribute="top" secondItem="61M-5k-fru" secondAttribute="bottom" constant="8" id="J9u-kV-x9Q"/>
+                            <constraint firstAttribute="trailing" secondItem="fAV-sJ-oXE" secondAttribute="trailing" constant="16" id="JFD-ay-75p"/>
+                            <constraint firstItem="EoU-6c-P83" firstAttribute="top" secondItem="esU-Lj-zN8" secondAttribute="top" id="net-hD-VbZ"/>
+                            <constraint firstItem="EoU-6c-P83" firstAttribute="leading" secondItem="esU-Lj-zN8" secondAttribute="leading" id="qia-jf-Zt6"/>
+                            <constraint firstItem="BYY-Pv-vix" firstAttribute="centerY" secondItem="esU-Lj-zN8" secondAttribute="centerY" id="ujY-vq-ERB"/>
+                            <constraint firstAttribute="trailing" secondItem="EoU-6c-P83" secondAttribute="trailing" id="ze4-xL-OHm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myActInd" destination="BYY-Pv-vix" id="asC-FS-FJv"/>
+                        <outlet property="myWebView" destination="EoU-6c-P83" id="4y2-MH-ZcK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3y0-ST-Ak6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3551.25" y="130.98591549295776"/>
         </scene>
         <!--Cupones-->
         <scene sceneID="j44-4E-QAB">
@@ -2547,7 +2620,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="rateApp" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Odd-gc-QFi"/>
+        <segue reference="PMB-TT-YxY"/>
         <segue reference="H3W-9g-Zj5"/>
     </inferredMetricsTieBreakers>
 </document>

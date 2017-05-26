@@ -49,6 +49,19 @@ class SALoginViewController: UIViewController {
         myPasswordTF.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
     }
+     ///Actualmente el video sigue funcionado por debajo. Para evitarlo,
+    ///Hay que controlar cuando la ventana desaparece y realizar las siguientes acciones:
+    ///Eliminar la vista actual como observador del vídeo (si no se hace esto se mantiene la referencia a la vista y el recolector de basura no borra el SALoginViewController, por lo que el vídeo sigue corriendo)
+    ///Una vez después de que nos des-suscribamos a los cambios sobre el video, producimos un último cambio.  Ir al final del vídeo, pero con el matiz de la tolerancia, para que no exista un delay.
+    ///NOTA: No he hecho la prueba en el viewWillDisappear, pero bajo la acción de un botón, sí que funciona. Por lo que aquí también debería.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        //Borrar las notificaciones
+        NotificationCenter.default.removeObserver(self)
+        //Parar el video, se añade la tolerancia para que no tarde en pararse en segundo plano
+        reproductor.seek(to: (reproductor.currentItem?.duration)!, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimePositiveInfinity)
+    }
     
     func showVideoInVC(){
         //video

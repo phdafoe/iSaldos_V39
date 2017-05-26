@@ -422,7 +422,7 @@
                         <outlet property="myNombreTF" destination="H82-97-5wR" id="ruF-uI-eXT"/>
                         <outlet property="myPasswordTF" destination="GQJ-58-rgj" id="hXw-K6-Ueu"/>
                         <outlet property="myusernameTF" destination="Wzr-gV-5CR" id="BeH-Ew-Ckk"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContoller" id="PMB-TT-YxY"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpFromRegisterVC" id="PMB-TT-YxY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozX-WJ-fdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -605,7 +605,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         <outlet property="myPasswordTF" destination="wMW-65-tAP" id="IrV-rK-bxG"/>
                         <outlet property="myUsernameTF" destination="rab-xY-mUe" id="uPS-si-zGP"/>
                         <outlet property="myresgistrarseBTn" destination="Ol5-5t-qBu" id="4n2-Yc-JIt"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContollerFromLogin" id="Odd-gc-QFi"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpFromLogin" id="Odd-gc-QFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi6-3b-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2548,6 +2548,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Odd-gc-QFi"/>
-        <segue reference="nX1-Ui-Xl1"/>
+        <segue reference="H3W-9g-Zj5"/>
     </inferredMetricsTieBreakers>
 </document>

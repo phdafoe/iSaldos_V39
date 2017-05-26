@@ -12,6 +12,8 @@ class SATabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectedIndex = 3
 
         // Do any additional setup after loading the view.
     }

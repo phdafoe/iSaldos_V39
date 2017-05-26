@@ -52,6 +52,10 @@
 		8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33841EC63E0500728B05 /* APIHELPERS.swift */; };
 		8B97535C1ED8785600FB534B /* SAParserPromociones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535B1ED8785600FB534B /* SAParserPromociones.swift */; };
 		8B97535E1ED8A45200FB534B /* SAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535D1ED8A45200FB534B /* SAWebViewController.swift */; };
+		8B9753601ED8B12E00FB534B /* SACuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535F1ED8B12E00FB534B /* SACuponesTableViewController.swift */; };
+		8B9753621ED8B14200FB534B /* SACuponDetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9753611ED8B14200FB534B /* SACuponDetalleTableViewController.swift */; };
+		8B9753641ED8BF9B00FB534B /* ActionSheetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9753631ED8BF9B00FB534B /* ActionSheetStoryboard.storyboard */; };
+		8B9753661ED8C00300FB534B /* SAActionSheetPersonalizadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9753651ED8C00300FB534B /* SAActionSheetPersonalizadoViewController.swift */; };
 		8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */; };
 		8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */; };
 		8BC4C9971ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */; };
@@ -121,6 +125,10 @@
 		8B7C33841EC63E0500728B05 /* APIHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHELPERS.swift; sourceTree = "<group>"; };
 		8B97535B1ED8785600FB534B /* SAParserPromociones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAParserPromociones.swift; sourceTree = "<group>"; };
 		8B97535D1ED8A45200FB534B /* SAWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAWebViewController.swift; sourceTree = "<group>"; };
+		8B97535F1ED8B12E00FB534B /* SACuponesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACuponesTableViewController.swift; sourceTree = "<group>"; };
+		8B9753611ED8B14200FB534B /* SACuponDetalleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACuponDetalleTableViewController.swift; sourceTree = "<group>"; };
+		8B9753631ED8BF9B00FB534B /* ActionSheetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheetStoryboard.storyboard; sourceTree = "<group>"; };
+		8B9753651ED8C00300FB534B /* SAActionSheetPersonalizadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAActionSheetPersonalizadoViewController.swift; sourceTree = "<group>"; };
 		8BC4C9921ECF411900AAD7D5 /* SAEnumerationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAEnumerationError.swift; sourceTree = "<group>"; };
 		8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASignIn.swift; sourceTree = "<group>"; };
 		8BC4C9961ECF70BA00AAD7D5 /* SAMenuLateralTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuLateralTableViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 				4127422F1E9FC6750074CDD7 /* API */,
 				412741EF1E9FC0710074CDD7 /* VIEWS_CONTROLLERS */,
 				412741B81E9F93B20074CDD7 /* Main.storyboard */,
+				8B9753631ED8BF9B00FB534B /* ActionSheetStoryboard.storyboard */,
 				412741BB1E9F93B20074CDD7 /* Assets.xcassets */,
 				412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */,
 				412741C01E9F93B20074CDD7 /* Info.plist */,
@@ -283,6 +292,9 @@
 		412742061E9FC19D0074CDD7 /* CUPONES */ = {
 			isa = PBXGroup;
 			children = (
+				8B97535F1ED8B12E00FB534B /* SACuponesTableViewController.swift */,
+				8B9753611ED8B14200FB534B /* SACuponDetalleTableViewController.swift */,
+				8B9753651ED8C00300FB534B /* SAActionSheetPersonalizadoViewController.swift */,
 			);
 			name = CUPONES;
 			sourceTree = "<group>";
@@ -463,6 +475,7 @@
 			files = (
 				4127423F1E9FD9640074CDD7 /* FOTO_4.jpg in Resources */,
 				412742401E9FD9640074CDD7 /* FOTO_5.jpg in Resources */,
+				8B9753641ED8BF9B00FB534B /* ActionSheetStoryboard.storyboard in Resources */,
 				B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
 				4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */,
@@ -542,11 +555,14 @@
 				8B4A968B1EC6435500BA8F8D /* SASplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
+				8B9753601ED8B12E00FB534B /* SACuponesTableViewController.swift in Sources */,
 				8BC4C9A01ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift in Sources */,
+				8B9753621ED8B14200FB534B /* SACuponDetalleTableViewController.swift in Sources */,
 				8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
 				8BC4C9951ECF425800AAD7D5 /* SASignIn.swift in Sources */,
+				8B9753661ED8C00300FB534B /* SAActionSheetPersonalizadoViewController.swift in Sources */,
 				8BC4C9931ECF411900AAD7D5 /* SAEnumerationError.swift in Sources */,
 				8BC4C99E1ECF7A4200AAD7D5 /* SAOfertasTableViewController.swift in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,

@@ -2338,8 +2338,20 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="NUEVA POST" id="Kwu-3h-byW">
-                        <barButtonItem key="rightBarButtonItem" title="X" id="2gc-UP-QXj"/>
+                        <barButtonItem key="rightBarButtonItem" title="X" id="2gc-UP-QXj">
+                            <connections>
+                                <action selector="hideVC:" destination="as0-1Y-Yib" id="wQT-5G-ekB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myDescripcionPoster" destination="ad9-um-Pyw" id="ENT-NA-pKe"/>
+                        <outlet property="myImagenPerfil" destination="qpa-Av-31X" id="e6P-8x-Zsd"/>
+                        <outlet property="myImagenPoster" destination="2cx-ZD-Msr" id="Rzy-2l-SfV"/>
+                        <outlet property="myNombreApellidoPerfil" destination="Ib2-ZO-VDj" id="cdV-Dt-7F2"/>
+                        <outlet property="myUsernamePerfil" destination="MWR-bg-ECF" id="jLt-7B-llg"/>
+                        <outlet property="myfechaHumanaPerfil" destination="8sX-go-ivj" id="VSa-yi-Q5I"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNo-AT-XQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

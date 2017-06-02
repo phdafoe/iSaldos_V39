@@ -60,7 +60,7 @@ class SALoginViewController: UIViewController {
         //Borrar las notificaciones
         NotificationCenter.default.removeObserver(self)
         //Parar el video, se añade la tolerancia para que no tarde en pararse en segundo plano
-        reproductor.seek(to: (reproductor.currentItem?.duration)!, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimePositiveInfinity)
+        player.seek(to: (player.currentItem?.duration)!, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimePositiveInfinity)
     }
     
     func showVideoInVC(){

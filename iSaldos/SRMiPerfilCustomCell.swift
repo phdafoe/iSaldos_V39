@@ -18,18 +18,10 @@ class SRMiPerfilCustomCell: UITableViewCell {
     @IBOutlet weak var myNombrePerfilUsuario: UILabel!
     @IBOutlet weak var myFondoDegradadoFotoPerfil: UIImageView!
     @IBOutlet weak var myUsernameSportReviewLBL: UILabel!
-    @IBOutlet weak var myNumeroPublicacionesLBL: UILabel!
-    @IBOutlet weak var myNumeroSeguidoresLBL: UILabel!
-    @IBOutlet weak var mySeguidoresLBL: UILabel!
-    @IBOutlet weak var myBotonPublicaciones: UIButton!
-    @IBOutlet weak var myBotonSeguidores: UIButton!
-    @IBOutlet weak var myBotonSeguidos: UIButton!
     @IBOutlet weak var myBotonAjustesPerfilUsuario: UIButton!
-    
-    @IBOutlet weak var degradadoFondo: UIImageView!
+        @IBOutlet weak var degradadoFondo: UIImageView!
     @IBOutlet weak var degradadoFoto: UIImageView!
-    
-    @IBOutlet weak var myUsuarioGenerales: UIButton!
+        @IBOutlet weak var myUsuarioGenerales: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

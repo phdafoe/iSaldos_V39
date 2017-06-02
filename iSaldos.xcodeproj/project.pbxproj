@@ -50,6 +50,10 @@
 		8B7C33811EC63BDA00728B05 /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33801EC63BDA00728B05 /* APIUTILS.swift */; };
 		8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33821EC63DD100728B05 /* RateApp.swift */; };
 		8B7C33851EC63E0500728B05 /* APIHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C33841EC63E0500728B05 /* APIHELPERS.swift */; };
+		8B7C64211EE1CCDB0013CDE0 /* ISNuevoPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C64201EE1CCDB0013CDE0 /* ISNuevoPostTableViewController.swift */; };
+		8B7C64231EE1CD6A0013CDE0 /* ISMuroSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C64221EE1CD6A0013CDE0 /* ISMuroSocialViewController.swift */; };
+		8B7C64251EE1CD960013CDE0 /* ISCanalSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C64241EE1CD960013CDE0 /* ISCanalSocialViewController.swift */; };
+		8B7C64271EE1CF9D0013CDE0 /* SAUserPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C64261EE1CF9D0013CDE0 /* SAUserPostModel.swift */; };
 		8B97535C1ED8785600FB534B /* SAParserPromociones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535B1ED8785600FB534B /* SAParserPromociones.swift */; };
 		8B97535E1ED8A45200FB534B /* SAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535D1ED8A45200FB534B /* SAWebViewController.swift */; };
 		8B9753601ED8B12E00FB534B /* SACuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97535F1ED8B12E00FB534B /* SACuponesTableViewController.swift */; };
@@ -123,6 +127,10 @@
 		8B7C33801EC63BDA00728B05 /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		8B7C33821EC63DD100728B05 /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		8B7C33841EC63E0500728B05 /* APIHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHELPERS.swift; sourceTree = "<group>"; };
+		8B7C64201EE1CCDB0013CDE0 /* ISNuevoPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNuevoPostTableViewController.swift; sourceTree = "<group>"; };
+		8B7C64221EE1CD6A0013CDE0 /* ISMuroSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMuroSocialViewController.swift; sourceTree = "<group>"; };
+		8B7C64241EE1CD960013CDE0 /* ISCanalSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCanalSocialViewController.swift; sourceTree = "<group>"; };
+		8B7C64261EE1CF9D0013CDE0 /* SAUserPostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAUserPostModel.swift; sourceTree = "<group>"; };
 		8B97535B1ED8785600FB534B /* SAParserPromociones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAParserPromociones.swift; sourceTree = "<group>"; };
 		8B97535D1ED8A45200FB534B /* SAWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAWebViewController.swift; sourceTree = "<group>"; };
 		8B97535F1ED8B12E00FB534B /* SACuponesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SACuponesTableViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +319,9 @@
 			children = (
 				B45B0E241EB8E3480038D174 /* CANAL/ MURO */,
 				4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */,
+				8B7C64241EE1CD960013CDE0 /* ISCanalSocialViewController.swift */,
+				8B7C64221EE1CD6A0013CDE0 /* ISMuroSocialViewController.swift */,
+				8B7C64201EE1CCDB0013CDE0 /* ISNuevoPostTableViewController.swift */,
 				4151018B1EB8D5E3003B016D /* USUARIOS */,
 				415101861EB8C35B003B016D /* MODEL_USER */,
 			);
@@ -334,6 +345,7 @@
 				8BC4C9941ECF425800AAD7D5 /* SASignIn.swift */,
 				8BC4C9A11ECF83A000AAD7D5 /* SAPromocionesModel.swift */,
 				8BC4C9A31ECF854900AAD7D5 /* SAAsociadoModel.swift */,
+				8B7C64261EE1CF9D0013CDE0 /* SAUserPostModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -554,6 +566,8 @@
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				8B4A968B1EC6435500BA8F8D /* SASplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
+				8B7C64271EE1CF9D0013CDE0 /* SAUserPostModel.swift in Sources */,
+				8B7C64231EE1CD6A0013CDE0 /* ISMuroSocialViewController.swift in Sources */,
 				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
 				8B9753601ED8B12E00FB534B /* SACuponesTableViewController.swift in Sources */,
 				8BC4C9A01ECF7A5400AAD7D5 /* SAOfertaDetalleTableViewController.swift in Sources */,
@@ -570,6 +584,7 @@
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				8B97535E1ED8A45200FB534B /* SAWebViewController.swift in Sources */,
+				8B7C64211EE1CCDB0013CDE0 /* ISNuevoPostTableViewController.swift in Sources */,
 				8BC4C9A21ECF83A000AAD7D5 /* SAPromocionesModel.swift in Sources */,
 				8BC4C99C1ECF714900AAD7D5 /* SATabBarViewController.swift in Sources */,
 				8BC4C9A41ECF854900AAD7D5 /* SAAsociadoModel.swift in Sources */,
@@ -579,6 +594,7 @@
 				8B7C33831EC63DD100728B05 /* RateApp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				8B4A96911EC644EC00BA8F8D /* SARegistroTableViewController.swift in Sources */,
+				8B7C64251EE1CD960013CDE0 /* ISCanalSocialViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

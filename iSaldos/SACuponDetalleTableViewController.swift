@@ -50,7 +50,21 @@ class SACuponDetalleTableViewController: UITableViewController {
             self.muestraImagenCD()
         }
         
+        let tapGR = UITapGestureRecognizer(target: self,
+                                           action: #selector(quitarCB))
+        view.addGestureRecognizer(tapGR)
+        
+        
     }
+    
+    func quitarCB(){
+        for c_subvista in self.view.subviews{
+            if c_subvista.tag == self.imageGroupTag{
+                c_subvista.removeFromSuperview()
+            }
+        }
+    }
+    
     
     func muestraImagenCD(){
         if myIdActividadAsociado.text == qrData{
